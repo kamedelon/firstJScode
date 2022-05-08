@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+    transition: .3s;
+}
+
+button {
+    background: none; 
+    padding: 10px; 
+    font-size: 20px; 
+    color: white;
+    border: 1px solid white;
+    transition: 0.3s;
+    border-radius: 6px;
+    text-transform: uppercase;
+    cursor: pointer;
+    z-index: 123414;
+}
+
+.popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 85px;
+    background: rgba(0, 0, 0, 0.466);
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+    position: absolute;
+    right: -330px;
+    top: 15px;
+    padding: 5px;
+    overflow: hidden;
+    transition: all 0.3s;
+}   
+
+h6 {
+    font-size: 14px;    
+}
+
+.show {
+    transform: translateX(-340px);
+}
+
+.debug {
+    right: -330px
+}
+
+.none {
+    width: 0px;
+    height: 0px;
+    visibility: hidden;
+}
+
+p {
+    cursor: pointer;
+    text-align: center;
+    position: absolute;
+    top: 0px;
+    right: 5px;
+    font-size: 18px;
+    border-radius: 4px;
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
